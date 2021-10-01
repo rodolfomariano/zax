@@ -95,7 +95,7 @@ function find() {
       div.innerHTML = `
         <div>
           <h3>${motoBoy}</h3>
-          <h4>Exclusivo: ${loja1Name}</h4>
+          <h4>Exclusivo: ${loja1Name} - Total: <strong>${loja1?.pedidos.length}</strong> pedidos</h4>
           <p>Total da entrega: <span>${totalDaEntrega}</span></p>
         </div>
       `
@@ -115,7 +115,7 @@ function find() {
       div.innerHTML = `
         <div>
           <h3>${motoBoy}</h3>
-          <h4>${loja}</h4>
+          <h4>${loja} - Total: <strong>${responstaLoja.pedidos.length}</strong> pedidos</h4>
           <p>Total da entrega: <span>${totalDaEntrega}</span></p>
         </div>
       `
@@ -132,7 +132,7 @@ function find() {
       div.innerHTML = `
         <div>
           <h3>${motoBoy}</h3>
-          <h4>Exclusivo: ${loja1Name}</h4>
+          <h4>Exclusivo: ${loja1Name} - Total: <strong>${loja1?.pedidos.length}</strong> pedidos</h4>
           <p>Total da entrega: <span>${totalDaEntrega}</span></p>
         </div>
       `
@@ -149,7 +149,7 @@ function find() {
       div.innerHTML = `
         <div>
           <h3>${motoBoy}</h3>
-          <h4>${loja}</h4>
+          <h4>${loja} - Total: <strong>${responstaLoja.pedidos.length}</strong> pedidos</h4>
           <p>Total da entrega: <span>${totalDaEntrega}</span></p>
         </div>
       `
