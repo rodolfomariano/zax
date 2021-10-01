@@ -52,11 +52,24 @@ input.addEventListener('change', event => {
 })
 
 const div = document.querySelector('.result')
+const divMotoBoyList = document.querySelector('.motoboy_list')
+
 const button = document.querySelector('button')
 
 button.addEventListener('click', event =>
   find()
 )
+
+divMotoBoyList.innerHTML = `
+  <h2>Escolha um motoboy ou deixe em branco</h2>
+`
+
+const motoBoysList = motoBoys.map(e => {
+  const m = e
+  divMotoBoyList.innerHTML += ` <span>${m.key}</span> | `
+})
+
+divMotoBoyList.innerHTML += ` <hr> `
 
 function find() {
   let loja1
@@ -71,6 +84,7 @@ function find() {
 
   const m = motoBoys.map(e => {
     const m = e
+
     if (m.key === findMotoBoy) {
       findMotoBoyData = m
     }
@@ -90,8 +104,6 @@ function find() {
     if (motoBoy === 'motoBoyQuatro') {
       const totalDaEntrega = (loja1Pedidos * (loja1Paga / 100)) + motoBoyTaxa
 
-      // div.textContent = `${motoBoy}, ${loja1Name}, Total da entréga: ${totalDaEntrega}`
-
       div.innerHTML = `
         <div>
           <h3>${motoBoy}</h3>
@@ -109,8 +121,6 @@ function find() {
       const totalDosPedidos = responstaLoja.pedidos.reduce((a, b) => a + b)
 
       const totalDaEntrega = (totalDosPedidos * (lojaPaga / 100)) + motoBoyTaxa
-
-      // div.textContent = `${motoBoy}, ${loja}, Total da entréga: ${totalDaEntrega}`
 
       div.innerHTML = `
         <div>
